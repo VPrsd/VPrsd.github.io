@@ -156,15 +156,6 @@ p.ss{font-size:1rem;font-weight:300;color:rgba(255,255,255,0.42);max-width:500px
   border:1px solid rgba(255,255,255,0.05);transition:all 0.2s var(--ease);cursor:default}
 .tag:hover{background:var(--teal-8);color:var(--teal);border-color:var(--teal-18)}
 
-/* EDUCATION */
-.edu-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3.5rem}
-.ec{background:#0d0d0d;border-radius:14px;padding:2rem;
-  border:1px solid rgba(255,255,255,0.05);transition:border-color 0.3s,transform 0.3s var(--ease)}
-.ec:hover{border-color:rgba(255,255,255,0.11);transform:translateY(-3px)}
-.ec-deg{font-size:0.96rem;font-weight:700;color:#fff;letter-spacing:-0.01em;margin-bottom:0.25rem}
-.ec-inst{font-size:0.82rem;color:var(--teal);font-weight:500;margin-bottom:0.5rem}
-.ec-note{font-size:0.78rem;font-weight:300;color:rgba(255,255,255,0.28);line-height:1.55}
-
 /* CONTACT */
 #contact-section{text-align:center;padding:10rem 5rem;border-top:1px solid rgba(255,255,255,0.06)}
 .contact-h{font-size:clamp(2.5rem,6.5vw,6rem);font-weight:800;letter-spacing:-0.045em;
@@ -199,7 +190,7 @@ footer{text-align:center;padding:2rem;font-size:0.68rem;letter-spacing:0.06em;
   nav{padding:0 1.4rem}
   .nav-links{display:none}
   .wrap{padding:5rem 1.4rem}
-  .two-col,.sg,.edu-row{grid-template-columns:1fr}
+  .two-col,.sg{grid-template-columns:1fr}
   .tl-row{grid-template-columns:1fr}
   .tl-l{border-right:none;border-bottom:1px solid rgba(255,255,255,0.04);padding:1.4rem}
   .tl-r{padding:1.4rem}
@@ -240,7 +231,7 @@ footer{text-align:center;padding:2rem;font-size:0.68rem;letter-spacing:0.06em;
     <h1 class="name">Vivek Prasad</h1>
     <p class="tagline">Spatial Intelligence &amp; Climate Risk</p>
     <div class="cta-row">
-      <a class="btn btn-fill" href="linkedin.com/in/vivekprasadgis" target="_blank">LinkedIn ↗</a>
+      <a class="btn btn-fill" href="https://www.linkedin.com/in/vivekprasadgis/" target="_blank">LinkedIn ↗</a>
       <a class="btn btn-ghost" href="#about-s">Explore work</a>
     </div>
   </div>
@@ -420,19 +411,16 @@ footer{text-align:center;padding:2rem;font-size:0.68rem;letter-spacing:0.06em;
   </div>
 </div>
 
-<div class="rule"></div>
-
-
 <!-- ═══ CONTACT ═══ -->
 <div id="contact-section">
   <div class="contact-h r up">Let's build<br>something spatial.</div>
   <p class="contact-sub r up" style="transition-delay:0.1s">Open to collaborations in GeoAI, climate risk, and spatial intelligence.</p>
   <div class="clinks r up" style="transition-delay:0.18s">
-    <a class="cpill cpill-w" href="linkedin.com/in/vivekprasadgis" target="_blank">
+    <a class="cpill cpill-w" href="https://www.linkedin.com/in/vivekprasadgis/" target="_blank">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       Connect on LinkedIn
     </a>
-    <a class="cpill cpill-g" href="linkedin.com/in/vivekprasadgis" target="_blank">
+    <a class="cpill cpill-g" href="https://www.linkedin.com/in/vivekprasadgis/" target="_blank">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       Send a message
     </a>
@@ -662,7 +650,7 @@ const co=new IntersectionObserver(entries=>{
 document.querySelectorAll('.count').forEach(el=>co.observe(el));
 
 /* ─── CARD 3D TILT ─── */
-document.querySelectorAll('.sb,.ec').forEach(card=>{
+document.querySelectorAll('.sb').forEach(card=>{
   card.addEventListener('mousemove',e=>{
     const r=card.getBoundingClientRect();
     const x=(e.clientX-r.left)/r.width-.5;
